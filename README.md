@@ -73,3 +73,9 @@ for tweet in tweepy.Cursor(api.search, q='#' + hashtag,rpp=100).items(maximum_nu
         
 
 print ('Extracted ' + str(maximum_number_of_tweets_to_be_extracted) \n  + ' tweets with hashtag #' + hashtag)
+
+# Get count of likes of each tweet
+
+def get_favourite_count(handle):
+    user = api.get_user(handle)
+    return user.favourits_count
