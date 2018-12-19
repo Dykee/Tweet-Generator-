@@ -77,5 +77,7 @@ print ('Extracted ' + str(maximum_number_of_tweets_to_be_extracted) \n  + ' twee
 # Get count of likes of each tweet
 
 def get_favourite_count(handle):
+
     user = api.get_user(handle)
+    
     return user.favourits_count
